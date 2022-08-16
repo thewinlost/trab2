@@ -6,15 +6,15 @@ import MeuEstilo from '../meuestilo'
 import { auth,firestore } from '../firebase'
 
 const Escrever = () => {
-  const [nome,  setNome] = useState('')
+  const [filme,  setFilme] = useState('')
   const [diretor,   setDiretor] = useState('')
 
-  const ref = firestore.collection('User').doc(auth.currentUser.uid).collection('Local').doc();
+  const ref = firestore.collection('User').doc(auth.currentUser.uid).collection('Filme').doc();
   const enviarDados = () => {
       ref.set
       ({
 
-       nome:nome,
+       filme:filme,
        diretor: diretor,
        id: ref.id,
 

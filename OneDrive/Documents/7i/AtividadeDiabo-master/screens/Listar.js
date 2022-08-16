@@ -26,7 +26,7 @@ const Listar = () => {
         querySnapshot.forEach((documentSnapshot) => {
           filme.push({
             ...documentSnapshot.data(),
-            key: documentSnapshot.filme,
+            key: documentSnapshot.id,
           });
         });
         setFilme(filme);
@@ -36,9 +36,6 @@ const Listar = () => {
     return () => subscriber();
   }, []);
 
-  if (loading) {
-    return <ActivityIndicator />;
-  }
 
   const Item = ({ filme }) => (
     <View style={MeuEstilo.item}>

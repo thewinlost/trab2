@@ -1,4 +1,4 @@
-/*jshint esversion:8*/
+/*jshint esversion:9*/
 import React, { useState, useEffect } from "react";
 
 import {
